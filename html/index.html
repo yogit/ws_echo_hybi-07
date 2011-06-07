@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script type="text/javascript" src="jquery-1.4.3.min.js"></script>
+        <script type="text/javascript" src="WSClient.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                    $("#host").val(location.host);
+                    $("#port").val(8080);
+                    $("#resource").val('/');
+            });
+        </script>
+    </head>
+    <body>
+        <h1>echoクライアント</h1>
+        <hr>
+        Host:<input id="host" type="text"><br>
+        Port:<input id="port" type="text"><br>
+        Resource:<input id="resource" type="text"><br>
+        Subprotocol:<input id="subprotocol" type="text"><br>
+        <button id="connectBtn">connect</button>
+        <button id="disconnectBtn" style="display: none">disconnect</button>
+        <hr>
+        <input id="msg" type="text"><button id="sendBtn">send</button><br>
+        <div id="log"></div>
+    </body>
+</html>
